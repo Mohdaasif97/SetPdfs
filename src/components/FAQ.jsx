@@ -55,7 +55,7 @@ export default function FAQ() {
   return (
     <>
       <Helmet>
-        <title>Bilder in PDF | SetPDFs - PDF Konverter</title>
+        <title>Mehrere Bilder zu PDF | Schneller Konverter | Kostenlos & Sicher</title>
         <meta 
           name="description" 
           content="Finden Sie Antworten auf häufige Fragen zu unserem PDF-Konverter. Erfahren Sie mehr über Bildformate, Dateigröße, Sicherheit und Qualität."
