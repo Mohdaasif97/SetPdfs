@@ -164,7 +164,7 @@ export default function UploadArea() {
             Bilder zu PDF konvertieren
           </h1>
           <p className="text-lg text-gray-600 mb-8">
-            Unterstützt alle gängigen Bildformate: JPG, PNG, GIF, BMP, WEBP, SVG, TIFF
+          Kostenlose Online-Umwandlung von JPG zu PDF. Auch für JPEG, TIFF, PNG, GIF, BMP, WEBP und HEIC. Keine Anmeldung nötig!
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-8">
