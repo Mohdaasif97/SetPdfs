@@ -39,6 +39,20 @@ export default function FAQ() {
     }
   ];
 
+  // Format the structured data exactly as in the example
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <>
       <Helmet>
@@ -48,9 +62,12 @@ export default function FAQ() {
           content="Finden Sie Antworten auf häufige Fragen zu unserem PDF-Konverter. Erfahren Sie mehr über Bildformate, Dateigröße, Sicherheit und Qualität."
         />
         <link rel="canonical" href="https://setpdfs.de/faq" />
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
       </Helmet>
 
-      <section className="py-16 bg-gray-50" itemScope itemType="https://schema.org/FAQPage">
+      <section className="py-16 bg-gray-50">
         <div className="max-w-3xl mx-auto px-4">
           <h1 className="text-3xl font-bold text-center mb-4">
             Häufig gestellte Fragen zum PDF Konverter
@@ -64,11 +81,8 @@ export default function FAQ() {
               <div 
                 key={index} 
                 className="bg-white rounded-lg shadow-sm"
-                itemScope 
-                itemProp="mainEntity"
-                itemType="https://schema.org/Question"
               >
-                <h2 itemProp="name">
+                <h2>
                   <button
                     className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 rounded-lg font-medium text-gray-900"
                     onClick={() => setOpenIndex(openIndex === index ? null : index)}
@@ -86,18 +100,6 @@ export default function FAQ() {
                     </span>
                   </button>
                 </h2>
-                
-                {/* Hidden div for search engines to see the answer */}
-                <div 
-                  itemScope
-                  itemProp="acceptedAnswer" 
-                  itemType="https://schema.org/Answer"
-                  style={{ display: 'none' }}
-                >
-                  <div itemProp="text">{faq.answer}</div>
-                </div>
-                
-                {/* Visible answer for users */}
                 {openIndex === index && (
                   <div 
                     id={`faq-answer-${index}`}
