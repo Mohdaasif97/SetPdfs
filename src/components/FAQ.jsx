@@ -86,15 +86,24 @@ export default function FAQ() {
                     </span>
                   </button>
                 </h2>
+                
+                {/* Hidden div for search engines to see the answer */}
+                <div 
+                  itemScope
+                  itemProp="acceptedAnswer" 
+                  itemType="https://schema.org/Answer"
+                  style={{ display: 'none' }}
+                >
+                  <div itemProp="text">{faq.answer}</div>
+                </div>
+                
+                {/* Visible answer for users */}
                 {openIndex === index && (
                   <div 
                     id={`faq-answer-${index}`}
                     className="px-6 pb-4 text-gray-600"
-                    itemScope
-                    itemProp="acceptedAnswer"
-                    itemType="https://schema.org/Answer"
                   >
-                    <div itemProp="text">{faq.answer}</div>
+                    {faq.answer}
                   </div>
                 )}
               </div>
