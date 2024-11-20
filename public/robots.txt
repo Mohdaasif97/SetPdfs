@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Allow: /uber-uns
 Allow: /agb
 Allow: /datenschutz
 # Sitemaps
