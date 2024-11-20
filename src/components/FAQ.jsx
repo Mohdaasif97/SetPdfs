@@ -39,19 +39,6 @@ export default function FAQ() {
     }
   ];
 
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
-  };
-
   return (
     <>
       <Helmet>
@@ -61,12 +48,9 @@ export default function FAQ() {
           content="Finden Sie Antworten auf häufige Fragen zu unserem PDF-Konverter. Erfahren Sie mehr über Bildformate, Dateigröße, Sicherheit und Qualität."
         />
         <link rel="canonical" href="https://setpdfs.de/faq" />
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
       </Helmet>
 
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50" itemScope itemType="https://schema.org/FAQPage">
         <div className="max-w-3xl mx-auto px-4">
           <h1 className="text-3xl font-bold text-center mb-4">
             Häufig gestellte Fragen zum PDF Konverter
@@ -77,8 +61,14 @@ export default function FAQ() {
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-sm">
-                <h2>
+              <div 
+                key={index} 
+                className="bg-white rounded-lg shadow-sm"
+                itemScope 
+                itemProp="mainEntity"
+                itemType="https://schema.org/Question"
+              >
+                <h2 itemProp="name">
                   <button
                     className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 rounded-lg font-medium text-gray-900"
                     onClick={() => setOpenIndex(openIndex === index ? null : index)}
@@ -90,6 +80,7 @@ export default function FAQ() {
                       className={`ml-6 transform transition-transform duration-200 ${
                         openIndex === index ? 'rotate-180' : ''
                       }`}
+                      aria-hidden="true"
                     >
                       ↓
                     </span>
@@ -99,8 +90,11 @@ export default function FAQ() {
                   <div 
                     id={`faq-answer-${index}`}
                     className="px-6 pb-4 text-gray-600"
+                    itemScope
+                    itemProp="acceptedAnswer"
+                    itemType="https://schema.org/Answer"
                   >
-                    {faq.answer}
+                    <div itemProp="text">{faq.answer}</div>
                   </div>
                 )}
               </div>
