@@ -1,6 +1,3 @@
-//hello
-
-
 import { useState } from 'react';
 import { Helmet } from 'react-helmet';
 
@@ -42,6 +39,20 @@ export default function FAQ() {
     }
   ];
 
+  // Structured data for SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <>
       <Helmet>
@@ -53,8 +64,12 @@ export default function FAQ() {
         <link rel="canonical" href="https://setpdfs.de/faq" />
       </Helmet>
 
-      <section className="py-16 bg-gray-50" itemScope itemType="https://schema.org/FAQPage">
-        <div className="max-w-3xl mx-auto px-4">
+      <section className="py-16 bg-gray-50">
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+
+        <div className="max-w-3xl mx-auto px-4" itemScope itemType="https://schema.org/FAQPage">
           <h1 className="text-3xl font-bold text-center mb-4">
             Häufig gestellte Fragen zum PDF Konverter
           </h1>
@@ -67,8 +82,8 @@ export default function FAQ() {
               <div 
                 key={index} 
                 className="bg-white rounded-lg shadow-sm"
-                itemScope 
                 itemProp="mainEntity"
+                itemScope 
                 itemType="https://schema.org/Question"
               >
                 <h2 itemProp="name">
@@ -93,8 +108,8 @@ export default function FAQ() {
                   <div 
                     id={`faq-answer-${index}`}
                     className="px-6 pb-4 text-gray-600"
-                    itemScope
                     itemProp="acceptedAnswer"
+                    itemScope
                     itemType="https://schema.org/Answer"
                   >
                     <div itemProp="text">{faq.answer}</div>
