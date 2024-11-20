@@ -1,3 +1,6 @@
+//hello
+
+
 import { useState } from 'react';
 import { Helmet } from 'react-helmet';
 
@@ -50,7 +53,7 @@ export default function FAQ() {
         <link rel="canonical" href="https://setpdfs.de/faq" />
       </Helmet>
 
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50" itemScope itemType="https://schema.org/FAQPage">
         <div className="max-w-3xl mx-auto px-4">
           <h1 className="text-3xl font-bold text-center mb-4">
             Häufig gestellte Fragen zum PDF Konverter
@@ -59,15 +62,11 @@ export default function FAQ() {
             Alles was Sie über unseren kostenlosen PDF Konverter wissen müssen
           </p>
 
-          <div 
-            className="space-y-4 accordion-wrapper" 
-            itemScope 
-            itemType="https://schema.org/FAQPage"
-          >
+          <div className="space-y-4">
             {faqs.map((faq, index) => (
               <div 
                 key={index} 
-                className="bg-white rounded-lg shadow-sm accordion-item"
+                className="bg-white rounded-lg shadow-sm"
                 itemScope 
                 itemProp="mainEntity"
                 itemType="https://schema.org/Question"
@@ -90,20 +89,17 @@ export default function FAQ() {
                     </span>
                   </button>
                 </h2>
-                <div 
-                  itemScope
-                  itemProp="acceptedAnswer"
-                  itemType="https://schema.org/Answer"
-                  className="accordion-item-content"
-                >
+                {openIndex === index && (
                   <div 
-                    itemProp="text"
                     id={`faq-answer-${index}`}
-                    className={`px-6 pb-4 text-gray-600 ${openIndex === index ? '' : 'hidden'}`}
+                    className="px-6 pb-4 text-gray-600"
+                    itemScope
+                    itemProp="acceptedAnswer"
+                    itemType="https://schema.org/Answer"
                   >
-                    {faq.answer}
+                    <div itemProp="text">{faq.answer}</div>
                   </div>
-                </div>
+                )}
               </div>
             ))}
           </div>
