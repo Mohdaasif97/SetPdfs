@@ -39,20 +39,6 @@ export default function FAQ() {
     }
   ];
 
-  // Format the structured data exactly as in the example
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
-  };
-
   return (
     <>
       <Helmet>
@@ -62,9 +48,6 @@ export default function FAQ() {
           content="Finden Sie Antworten auf häufige Fragen zu unserem PDF-Konverter. Erfahren Sie mehr über Bildformate, Dateigröße, Sicherheit und Qualität."
         />
         <link rel="canonical" href="https://setpdfs.de/faq" />
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
       </Helmet>
 
       <section className="py-16 bg-gray-50">
@@ -76,13 +59,20 @@ export default function FAQ() {
             Alles was Sie über unseren kostenlosen PDF Konverter wissen müssen
           </p>
 
-          <div className="space-y-4">
+          <div 
+            className="space-y-4 accordion-wrapper" 
+            itemScope 
+            itemType="https://schema.org/FAQPage"
+          >
             {faqs.map((faq, index) => (
               <div 
                 key={index} 
-                className="bg-white rounded-lg shadow-sm"
+                className="bg-white rounded-lg shadow-sm accordion-item"
+                itemScope 
+                itemProp="mainEntity"
+                itemType="https://schema.org/Question"
               >
-                <h2>
+                <h2 itemProp="name">
                   <button
                     className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 rounded-lg font-medium text-gray-900"
                     onClick={() => setOpenIndex(openIndex === index ? null : index)}
@@ -100,14 +90,20 @@ export default function FAQ() {
                     </span>
                   </button>
                 </h2>
-                {openIndex === index && (
+                <div 
+                  itemScope
+                  itemProp="acceptedAnswer"
+                  itemType="https://schema.org/Answer"
+                  className="accordion-item-content"
+                >
                   <div 
+                    itemProp="text"
                     id={`faq-answer-${index}`}
-                    className="px-6 pb-4 text-gray-600"
+                    className={`px-6 pb-4 text-gray-600 ${openIndex === index ? '' : 'hidden'}`}
                   >
                     {faq.answer}
                   </div>
-                )}
+                </div>
               </div>
             ))}
           </div>
