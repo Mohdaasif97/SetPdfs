@@ -60,7 +60,7 @@ export default function FAQ() {
           name="description" 
           content="Finden Sie Antworten auf häufige Fragen zu unserem PDF-Konverter. Erfahren Sie mehr über Bildformate, Dateigröße, Sicherheit und Qualität."
         />
-        <link rel="canonical" href="https://setpdfs.de/faq" />
+        <link rel="canonical" href="https://setpdfs.de" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
