@@ -3,10 +3,16 @@ Allow: /
 Allow: /uber-uns
 Allow: /agb
 Allow: /datenschutz
-# Sitemaps
-Sitemap: https://setpdfs.de/sitemap.xml
-
-# Disable crawling of unnecessary paths
 Disallow: /api/
 Disallow: /admin/
 Disallow: /private/
+Disallow: /*.json$
+Disallow: /*?*
+Disallow: /*/print/
+Disallow: /temp/
+
+# Crawl-delay recommendations
+Crawl-delay: 10
+
+# Sitemaps
+Sitemap: https://setpdfs.de/sitemap.xml
