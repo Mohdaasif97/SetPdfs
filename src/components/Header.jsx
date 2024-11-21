@@ -3,6 +3,21 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { convertImagesToPDF } from '../utils/pdfConverter';
 
+const Logo = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" className="w-10 h-10">
+    <circle cx="100" cy="100" r="90" fill="#f0f0f0"/>
+    <rect x="45" y="55" width="50" height="60" fill="#1e3d59" rx="2"/>
+    <rect x="50" y="60" width="40" height="50" fill="#ff6b6b" rx="2"/>
+    <path d="M55 100 L70 80 L85 100" stroke="white" strokeWidth="2" fill="none"/>
+    <text x="105" y="90" fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="24" fill="#1e3d59">PDF</text>
+    <path d="M75 115 L125 115" stroke="#1e3d59" strokeWidth="2"/>
+    <path d="M115 110 L125 115 L115 120" stroke="#1e3d59" strokeWidth="2" fill="none"/>
+    <text x="100" y="140" fontFamily="Arial, sans-serif" fontSize="14" fill="#1e3d59" textAnchor="middle">KONVERTER</text>
+    <rect x="45" y="130" width="10" height="2" fill="#ff6b6b"/>
+    <rect x="145" y="130" width="10" height="2" fill="#ff6b6b"/>
+  </svg>
+);
+
 export default function Header() {
   const [showUploadModal, setShowUploadModal] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -86,10 +101,11 @@ export default function Header() {
           <div className="flex justify-between items-center">
             <Link 
               to="/" 
-              className="text-2xl font-semibold text-indigo-600 hover:text-indigo-700 transition-colors"
+              className="flex items-center space-x-2 text-2xl font-semibold text-indigo-600 hover:text-indigo-700 transition-colors"
               aria-label="SetPDFs - Startseite"
             >
-              SetPdfs
+              <Logo />
+              <span>SetPdfs</span>
             </Link>
 
             <div className="hidden md:flex items-center space-x-8">
