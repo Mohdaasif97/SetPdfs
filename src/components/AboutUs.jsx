@@ -6,8 +6,8 @@ const AboutUs = () => {
     <>
       {/* SEO Meta Tags */}
       <Helmet>
-        <title>Über SetPdfs - Ihr vertrauenswürdiger PDF Konverter | Bilder zu PDF</title>
-        <meta name="description" content="SetPdfs ist Ihr kostenloser Online-PDF-Konverter. Wandeln Sie JPG, PNG und andere Bildformate sicher und schnell in PDF um. ✓ Keine Installation ✓ DSGVO-konform ✓ Kostenlos" />
+      <title>Mehrere Bilder zu PDF | Schneller Konverter | Kostenlos & Sicher</title>
+      <meta name="description" content="SetPdfs ist Ihr kostenloser Online-PDF-Konverter. Wandeln Sie JPG, PNG und andere Bildformate sicher und schnell in PDF um. ✓ Keine Installation ✓ DSGVO-konform ✓ Kostenlos" />
         <meta name="keywords" content="PDF Konverter, Bilder zu PDF, Online PDF Tool, kostenloser PDF Konverter, sicherer PDF Konverter, DSGVO-konform" />
       </Helmet>
 

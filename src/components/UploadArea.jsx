@@ -117,8 +117,8 @@ export default function UploadArea() {
   return (
     <>
       <Helmet>
-        <title>Bilder zu PDF konvertieren - Kostenlos & DSGVO-konform | SetPDFs</title>
-        <meta name="description" content="Wandeln Sie kostenlos Bilder in PDF um. Unterstützt JPG, PNG, GIF und mehr. ✓ Ohne Anmeldung ✓ DSGVO-konform ✓ Bis 25MB" />
+      <title>Mehrere Bilder zu PDF | Schneller Konverter | Kostenlos & Sicher</title>
+      <meta name="description" content="Wandeln Sie kostenlos Bilder in PDF um. Unterstützt JPG, PNG, GIF und mehr. ✓ Ohne Anmeldung ✓ DSGVO-konform ✓ Bis 25MB" />
         <meta name="keywords" content="bilder zu pdf, jpg zu pdf, png zu pdf, bildkonverter, pdf konverter kostenlos, bilder zusammenfügen" />
         <link rel="canonical" href="https://setpdfs.de" />
         <meta property="og:title" content="Bilder zu PDF konvertieren - Kostenlos & DSGVO-konform" />

@@ -1,8 +1,9 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet';
 
 const SEO = ({ 
-  title = "SetPdfs - Kostenlose PDF Konvertierung Online", 
+  title = "Mehrere Bilder zu PDF | Schneller Konverter | Kostenlos & Sicher",
+
   description = "Konvertieren Sie Bilder kostenlos in PDF. JPG zu PDF, PNG zu PDF, Bilder zusammenfügen. Schnell, sicher und DSGVO-konform.",
   canonicalUrl,
   path,

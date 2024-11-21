@@ -71,8 +71,8 @@ export default function Header() {
   return (
     <>
       <Helmet>
-        <title>SetPDFs - Kostenloser Online PDF Konverter</title>
-        <meta name="description" content="Konvertieren Sie Ihre Bilder kostenlos in PDF. Unterstützt JPG, PNG und mehr. DSGVO-konform und sicher." />
+      <title>Mehrere Bilder zu PDF | Schneller Konverter | Kostenlos & Sicher</title>
+      <meta name="description" content="Konvertieren Sie Ihre Bilder kostenlos in PDF. Unterstützt JPG, PNG und mehr. DSGVO-konform und sicher." />
         <meta name="keywords" content="pdf konverter, bilder zu pdf, jpg zu pdf, png zu pdf, kostenlos" />
         <link rel="canonical" href="https://setpdfs.de" />
         <meta property="og:title" content="SetPDFs - Kostenloser Online PDF Konverter" />
@@ -80,18 +80,31 @@ export default function Header() {
         <meta property="og:url" content="https://setpdfs.de" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="de_DE" />
+        <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+        
+        {/* Updated schema markup with both Organization and WebApplication */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "WebApplication",
-            "name": "SetPDFs",
-            "applicationCategory": "PDF Converter",
-            "operatingSystem": "Web Browser",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "EUR"
-            }
+            "@graph": [
+              {
+                "@type": "Organization",
+                "url": "https://setpdfs.de",
+                "logo": "https://setpdfs.de/logo.svg",
+                "name": "SetPDFs"
+              },
+              {
+                "@type": "WebApplication",
+                "name": "SetPDFs",
+                "applicationCategory": "PDF Converter",
+                "operatingSystem": "Web Browser",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "EUR"
+                }
+              }
+            ]
           })}
         </script>
       </Helmet>

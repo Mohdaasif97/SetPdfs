@@ -7,7 +7,7 @@ const Terms = () => {
     return (
         <>
             <SEO 
-                title="Allgemeine Geschäftsbedingungen (AGB) | SetPdfs"
+                title=" Geschäftsbedingungen (AGB) | SetPdfsAllgemeine" 
                 description="AGB für die kostenlose PDF-Konvertierung auf SetPdfs. Transparente Nutzungsbedingungen für unsere Online PDF-Tools. DSGVO-konform und sicher."
                 path="/agb"
                 keywords="AGB, Geschäftsbedingungen, PDF Konvertierung, SetPdfs Bedingungen, kostenlose PDF Tools, Nutzungsbedingungen"
