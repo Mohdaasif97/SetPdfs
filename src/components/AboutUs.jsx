@@ -9,10 +9,10 @@ const AboutUs = () => {
         <title>Mehrere Bilder zu PDF | Schneller Konverter | Kostenlos & Sicher</title>
         <meta name="description" content="SetPdfs ist Ihr kostenloser Online-PDF-Konverter. Wandeln Sie JPG, PNG und andere Bildformate sicher und schnell in PDF um. ✓ Keine Installation ✓ DSGVO-konform ✓ Kostenlos" />
         <meta name="keywords" content="PDF Konverter, Bilder zu PDF, Online PDF Tool, kostenloser PDF Konverter, sicherer PDF Konverter, DSGVO-konform" />
-        <link rel="canonical" href="https://setpdfs.de/uber-uns" />
+        <link rel="canonical" href="https://www.setpdfs.de/uber-uns" />
         <meta property="og:title" content="Über SetPdfs - Kostenloser PDF Konverter" />
         <meta property="og:description" content="Erfahren Sie mehr über unseren kostenlosen Online-PDF-Konverter. ✓ Schnell ✓ Sicher ✓ DSGVO-konform" />
-        <meta property="og:url" content="https://setpdfs.de/uber-uns" />
+        <meta property="og:url" content="https://www.setpdfs.de/uber-uns" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -21,7 +21,7 @@ const AboutUs = () => {
                 "@type": "AboutPage",
                 "name": "Über SetPdfs",
                 "description": "Erfahren Sie mehr über unseren kostenlosen PDF-Konverter",
-                "url": "https://setpdfs.de/uber-uns",
+                "url": "https://www.setpdfs.de/uber-uns",
                 "mainEntity": {
                   "@type": "WebApplication",
                   "name": "SetPdfs",

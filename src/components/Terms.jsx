@@ -84,7 +84,7 @@ const Terms = () => {
                             <p>Bei Fragen zu diesen AGB erreichen Sie uns unter:</p>
                             <ul className="list-disc pl-6 space-y-2 mt-4">
                                 <li>E-Mail: <a href="mailto:setpdfs@gmail.com" className="text-blue-600 hover:underline">setpdfs@gmail.com</a></li>
-                                <li>Website: <a href="https://setpdfs.de" className="text-blue-600 hover:underline">SetPdfs.de</a></li>
+                                <li>Website: <a href="https://www.setpdfs.de" className="text-blue-600 hover:underline">SetPdfs.de</a></li>
                             </ul>
                         </section>
 
@@ -110,7 +110,7 @@ const Terms = () => {
                     "publisher": {
                         "@type": "Organization",
                         "name": "SetPdfs",
-                        "url": "https://setpdfs.de"
+                        "url": "https://www.setpdfs.de"
                     },
                     "lastReviewed": currentDate,
                     "mainEntity": {

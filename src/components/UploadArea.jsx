@@ -120,11 +120,11 @@ export default function UploadArea() {
       <title>Mehrere Bilder zu PDF | Schneller Konverter | Kostenlos & Sicher</title>
       <meta name="description" content="Wandeln Sie kostenlos Bilder in PDF um. Unterstützt JPG, PNG, GIF und mehr. ✓ Ohne Anmeldung ✓ DSGVO-konform ✓ Bis 25MB" />
         <meta name="keywords" content="bilder zu pdf, jpg zu pdf, png zu pdf, bildkonverter, pdf konverter kostenlos, bilder zusammenfügen" />
-        <link rel="canonical" href="https://setpdfs.de" />
+        <link rel="canonical" href="https://www.setpdfs.de" />
         <meta property="og:title" content="Bilder zu PDF konvertieren - Kostenlos & DSGVO-konform" />
         <meta property="og:description" content="Konvertieren Sie Ihre Bilder kostenlos in PDF. Unterstützt alle gängigen Bildformate. Keine Registrierung erforderlich." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://setpdfs.de" />
+        <meta property="og:url" content="https://www.setpdfs.de" />
         <meta property="og:locale" content="de_DE" />
         <script type="application/ld+json">
           {JSON.stringify({

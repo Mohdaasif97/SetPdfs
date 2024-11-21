@@ -62,7 +62,7 @@ const Privacy = () => {
                             <p>Bei Fragen zu dieser Datenschutzerklärung oder unseren Datenschutzpraktiken können Sie uns wie folgt kontaktieren:</p>
                             <ul className="list-disc pl-6 space-y-2 mt-4">
                                 <li>E-Mail: <a href="mailto:setpdfs@gmail.com" className="text-blue-600 hover:underline">setpdfs@gmail.com</a></li>
-                                <li>Website: <a href="https://setpdfs.de" className="text-blue-600 hover:underline">SetPdfs.de</a></li>
+                                <li>Website: <a href="https://www.setpdfs.de" className="text-blue-600 hover:underline">SetPdfs.de</a></li>
                             </ul>
                         </section>
 
@@ -92,14 +92,14 @@ const Privacy = () => {
             {/* Structured Data for Privacy Policy */}
             <script type="application/ld+json">
                 {JSON.stringify({
-                    "@context": "https://schema.org",
+                    "@context": "https://www.schema.org",
                     "@type": "WebPage",
                     "name": "Datenschutzerklärung",
                     "description": "Datenschutzerklärung von SetPdfs - Keine Datenerhebung, keine Cookies, 100% DSGVO-konform",
                     "publisher": {
                         "@type": "Organization",
                         "name": "SetPdfs",
-                        "url": "https://setpdfs.de"
+                        "url": "https://www.setpdfs.de"
                     },
                     "lastReviewed": currentDate,
                     "mainEntity": {
@@ -117,7 +117,7 @@ const Privacy = () => {
             {/* FAQ Structured Data */}
             <script type="application/ld+json">
                 {JSON.stringify({
-                    "@context": "https://schema.org",
+                    "@context": "https://www.schema.org",
                     "@type": "FAQPage",
                     "mainEntity": [{
                         "@type": "Question",

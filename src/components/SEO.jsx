@@ -10,7 +10,7 @@ const SEO = ({
   keywords,
   imageUrl
 }) => {
-  const siteUrl = "https://setpdfs.de";
+  const siteUrl = "https://www.setpdfs.de";
   const fullUrl = path ? `${siteUrl}${path}` : siteUrl;
   const defaultImage = `${siteUrl}/logo.png`;
 
@@ -58,7 +58,7 @@ const SEO = ({
             "@context": "https://schema.org",
             "@type": "WebApplication",
             "name": "SetPdfs",
-            "url": "https://setpdfs.de",
+            "url": "https://www.setpdfs.de",
             "description": "Kostenloser Online PDF Konverter - Bilder in PDF umwandeln",
             "applicationCategory": "PDF Converter",
             "operatingSystem": "All",
@@ -92,7 +92,7 @@ const SEO = ({
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "SetPdfs",
-            "url": "https://setpdfs.de",
+            "url": "https://www.setpdfs.de",
             "logo": "${siteUrl}/logo.png",
             "contactPoint": {
               "@type": "ContactPoint",
@@ -100,7 +100,7 @@ const SEO = ({
               "availableLanguage": ["German"]
             },
             "sameAs": [
-              "https://setpdfs.de"
+              "https://www.setpdfs.de"
             ]
           }
         `}
