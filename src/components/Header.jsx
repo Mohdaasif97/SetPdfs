@@ -78,30 +78,35 @@ export default function Header() {
         <link rel="icon" type="image/svg+xml" href="/logo.svg" />
         
         {/* Updated schema markup with both Organization and WebApplication */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://www.schema.org",
-            "@graph": [
-              {
-                "@type": "Organization",
-                "url": "https://www.setpdfs.de",
-                "logo": "https://www.setpdfs.de/logo.svg",
-                "name": "SetPDFs"
-              },
-              {
-                "@type": "WebApplication",
-                "name": "SetPDFs",
-                "applicationCategory": "PDF Converter",
-                "operatingSystem": "Web Browser",
-                "offers": {
-                  "@type": "Offer",
-                  "price": "0",
-                  "priceCurrency": "EUR"
-                }
-              }
-            ]
-          })}
-        </script>
+      <script type="application/ld+json">
+  {JSON.stringify({
+    "@context": "https://www.schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "url": "https://www.setpdfs.de",
+        "logo": {                                    // Changed to object
+          "@type": "ImageObject",
+          "url": "https://www.setpdfs.de/logo.svg",
+          "width": "200",
+          "height": "200"
+        },
+        "name": "SetPDFs"
+      },
+      {
+        "@type": "WebApplication",
+        "name": "SetPDFs",
+        "applicationCategory": "PDF Converter",
+        "operatingSystem": "Web Browser",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR"
+        }
+      }
+    ]
+  })}
+</script>
       </Helmet>
 
       <header className="bg-white shadow-sm sticky top-0 z-50 w-full" role="banner">
